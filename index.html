@@ -1,307 +1,704 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./swiper/swiper.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./swiper/swiper.min.css" />
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <a href="#" class="logo"><img src="./imgs/logo/logoRed.png" alt="logo"></a>
-            <div class="util">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="./imgs/icons/loginPassword.png" alt="login">
-                            <div>로그인</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./imgs/icons/loginJoin.png" alt="login">
-                            <div>회원가입</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./imgs/icons/loginMember.png" alt="login">
-                            <div>MY CGV</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="./imgs/icons/loginCustomer.png" alt="login">
-                            <div>고객센터</div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a href="#" class="logo"
+          ><img src="./imgs/logo/logoRed.png" alt="logo"
+        /></a>
+        <div class="util">
+          <ul>
+            <li>
+              <a href="#">
+                <img src="./imgs/icons/loginPassword.png" alt="login" />
+                <div>로그인</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./imgs/icons/loginJoin.png" alt="login" />
+                <div>회원가입</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./imgs/icons/loginMember.png" alt="login" />
+                <div>MY CGV</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./imgs/icons/loginCustomer.png" alt="login" />
+                <div>고객센터</div>
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
     </header>
+    <nav>
+      <div class="container">
+        <ul class="nav">
+          <li>
+            <a href="#">영화</a>
+            <ul class="sub">
+              <li>
+                <a href="#"><strong>영화</strong></a>
+              </li>
+              <li><a href="#">무비차트</a></li>
+              <li><a href="#">아트하우스</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">극장</a>
+            <ul class="sub">
+              <li>
+                <a href="#"><strong>극장</strong></a>
+              </li>
+              <li><a href="#">CGV극장</a></li>
+              <li><a href="#">아트하우스</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">예매</a>
+            <ul class="sub">
+              <li>
+                <a href="#"><strong>예매</strong></a>
+              </li>
+              <li><a href="#">빠른예매</a></li>
+              <li><a href="#">상영스케쥴</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">스토어</a>
+            <ul class="sub">
+              <li>
+                <a href="#"><strong>스토어</strong></a>
+              </li>
+              <li><a href="#">패키지</a></li>
+              <li><a href="#">영화관람권</a></li>
+              <li><a href="#">기프트카드</a></li>
+              <li><a href="#">콤보</a></li>
+              <li><a href="#">팝콘</a></li>
+              <li><a href="#">음료</a></li>
+              <li><a href="#">스낵</a></li>
+              <li><a href="#">플레이존</a></li>
+              <li><a href="#">씨네샵</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <section id="movieVideo">
-        <div class="container">
-            <div class="video-wrapper">
-                <video src="./video/OurSeason_1080x608_PC.mp4"></video>
-                <div class="info">
-                    <h1 class="title">3일의 휴가</h1>
-                    <p class="desc">
-                        이 세상 딸들이 꼭 봐야 할 영화<br>
-                        12월 6일 극장 대개봉
-                    </p>
-                    <div class="btn-wrapper">
-                        <a href="#">상세보기</a>
-                    </div>
-                </div>    
+      <div class="container">
+        <div class="video-wrapper">
+          <video src="./video/OurSeason_1080x608_PC.mp4" muted></video>
+          <div class="info">
+            <h1 class="title">3일의 휴가</h1>
+            <p class="desc">
+              이 세상 딸들이 꼭 봐야 할 영화<br />
+              12월 6일 극장 대개봉
+            </p>
+            <div class="btn-wrapper">
+              <a href="#">상세보기</a>
+              <button onclick="videoController()">영상재생</button>
+              <button onclick="soundController()">소리켜기</button>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <section id="movieChart">
-        <div class="container">
-            <div class="tab_group">
-                <ul class="tab">
-                    <li class="on"><a href="#">무비차트</a></li>
-                    <li><a href="#">상영예정작</a></li>
-                </ul>
-                <div class="tab_content on slide-content">
-                    <div class="swiper-wrapper">
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울1</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울2</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울3</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울4</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울5</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울6</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울7</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울8</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울9</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울10</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="tab_group">
+          <ul class="tab">
+            <li class="on"><a href="#">무비차트</a></li>
+            <li><a href="#">상영예정작</a></li>
+          </ul>
+          <div class="tab_content on slide-content">
+            <div class="swiper-wrapper">
+              <div class="movie swiper-slide">
+                <div class="image">
+                  <img
+                    src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg"
+                    alt="poster"
+                  />
+                  <div class="btn_wrap">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
                 </div>
-                <div class="tab_content slide-content">
-                    <div class="swiper-wrapper">
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87727/87727_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울1</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87727/87727_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울1</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="movie swiper-slide">
-                            <div class="image">
-                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87727/87727_320.jpg" alt="poster">
-                            </div>
-                            <div class="info">
-                                <h1 class="title">싱글 인 서울1</h1>
-                                <div class="wrap">
-                                    <span><img src="./imgs/icons/eggGoldenegggreat.png" alt="egg">93%</span>
-                                    <span>예매율 5.0%</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="info">
+                  <h1 class="title">서울의 봄</h1>
+                  <div class="wrap">
+                    <span
+                      ><img
+                        src="./imgs/icons/eggGoldenegggreat.png"
+                        alt="egg"
+                      />93%</span
+                    >
+                    <span>예매율 5.0%</span>
+                  </div>
                 </div>
+              </div>
+              <div class="movie swiper-slide">
+                <div class="image">
+                  <img
+                    src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg"
+                    alt="poster"
+                  />
+                  <div class="btn_wrap">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <h1 class="title">서울의 봄</h1>
+                  <div class="wrap">
+                    <span
+                      ><img
+                        src="./imgs/icons/eggGoldenegggreat.png"
+                        alt="egg"
+                      />93%</span
+                    >
+                    <span>예매율 5.0%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="movie swiper-slide">
+                <div class="image">
+                  <img
+                    src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg"
+                    alt="poster"
+                  />
+                  <div class="btn_wrap">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <h1 class="title">서울의 봄</h1>
+                  <div class="wrap">
+                    <span
+                      ><img
+                        src="./imgs/icons/eggGoldenegggreat.png"
+                        alt="egg"
+                      />93%</span
+                    >
+                    <span>예매율 5.0%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="movie swiper-slide">
+                <div class="image">
+                  <img
+                    src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg"
+                    alt="poster"
+                  />
+                  <div class="btn_wrap">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <h1 class="title">서울의 봄</h1>
+                  <div class="wrap">
+                    <span
+                      ><img
+                        src="./imgs/icons/eggGoldenegggreat.png"
+                        alt="egg"
+                      />93%</span
+                    >
+                    <span>예매율 5.0%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="movie swiper-slide">
+                <div class="image">
+                  <img
+                    src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg"
+                    alt="poster"
+                  />
+                  <div class="btn_wrap">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <h1 class="title">서울의 봄</h1>
+                  <div class="wrap">
+                    <span
+                      ><img
+                        src="./imgs/icons/eggGoldenegggreat.png"
+                        alt="egg"
+                      />93%</span
+                    >
+                    <span>예매율 5.0%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="movie swiper-slide">
+                <div class="image">
+                  <img
+                    src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg"
+                    alt="poster"
+                  />
+                  <div class="btn_wrap">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <h1 class="title">서울의 봄</h1>
+                  <div class="wrap">
+                    <span
+                      ><img
+                        src="./imgs/icons/eggGoldenegggreat.png"
+                        alt="egg"
+                      />93%</span
+                    >
+                    <span>예매율 5.0%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="movie swiper-slide">
+                <div class="image">
+                  <img
+                    src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg"
+                    alt="poster"
+                  />
+                  <div class="btn_wrap">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <h1 class="title">서울의 봄</h1>
+                  <div class="wrap">
+                    <span
+                      ><img
+                        src="./imgs/icons/eggGoldenegggreat.png"
+                        alt="egg"
+                      />93%</span
+                    >
+                    <span>예매율 5.0%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="movie swiper-slide">
+                <div class="image">
+                  <img
+                    src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg"
+                    alt="poster"
+                  />
+                  <div class="btn_wrap">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <h1 class="title">서울의 봄</h1>
+                  <div class="wrap">
+                    <span
+                      ><img
+                        src="./imgs/icons/eggGoldenegggreat.png"
+                        alt="egg"
+                      />93%</span
+                    >
+                    <span>예매율 5.0%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="movie swiper-slide">
+                <div class="image">
+                  <img
+                    src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg"
+                    alt="poster"
+                  />
+                  <div class="btn_wrap">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <h1 class="title">서울의 봄</h1>
+                  <div class="wrap">
+                    <span
+                      ><img
+                        src="./imgs/icons/eggGoldenegggreat.png"
+                        alt="egg"
+                      />93%</span
+                    >
+                    <span>예매율 5.0%</span>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="tab_content slide-content">
+            <div class="swiper-wrapper">
+              <div class="movie swiper-slide">
+                <div class="image">
+                  <img
+                    src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg"
+                    alt="poster"
+                  />
+                  <div class="btn_wrap">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <h1 class="title">서울의 봄</h1>
+                  <div class="wrap">
+                    <span
+                      ><img
+                        src="./imgs/icons/eggGoldenegggreat.png"
+                        alt="egg"
+                      />93%</span
+                    >
+                    <span>예매율 5.0%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="movie swiper-slide">
+                <div class="image">
+                  <img
+                    src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg"
+                    alt="poster"
+                  />
+                  <div class="btn_wrap">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <h1 class="title">서울의 봄</h1>
+                  <div class="wrap">
+                    <span
+                      ><img
+                        src="./imgs/icons/eggGoldenegggreat.png"
+                        alt="egg"
+                      />93%</span
+                    >
+                    <span>예매율 5.0%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="movie swiper-slide">
+                <div class="image">
+                  <img
+                    src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000087/87554/87554_320.jpg"
+                    alt="poster"
+                  />
+                  <div class="btn_wrap">
+                    <a href="#">상세보기</a>
+                    <a href="#">예매하기</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <h1 class="title">서울의 봄</h1>
+                  <div class="wrap">
+                    <span
+                      ><img
+                        src="./imgs/icons/eggGoldenegggreat.png"
+                        alt="egg"
+                      />93%</span
+                    >
+                    <span>예매율 5.0%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <section id="event">
-        <div class="container">
-            <h1 class="title">이벤트</h1>
-            <div class="event-slide-content">
-                <div class="swiper-wrapper">
-                    <div class="event swiper-slide">
-                        <div class="image">
-                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/39161/17013942232030.jpg" alt="1">
-                        </div>
-                        <strong>MOINTS X TRAVEL LABEL</strong>
-                        <span>2023.11.28~2023.12.08</span>
-                    </div>
-                    <div class="event swiper-slide">
-                        <div class="image">
-                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/39161/17013942232030.jpg" alt="1">
-                        </div>
-                        <strong>MOINTS X TRAVEL LABEL</strong>
-                        <span>2023.11.28~2023.12.08</span>
-                    </div>
-                    <div class="event swiper-slide">
-                        <div class="image">
-                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/39140/17010728538310.jpg" alt="1">
-                        </div>
-                        <strong>MOINTS X TRAVEL LABEL</strong>
-                        <span>2023.11.28~2023.12.08</span>
-                    </div>
-                    <div class="event swiper-slide">
-                        <div class="image">
-                            <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/39140/17010728538310.jpg" alt="1">
-                        </div>
-                        <strong>MOINTS X TRAVEL LABEL</strong>
-                        <span>2023.11.28~2023.12.08</span>
-                    </div>
-                </div>
+      <div class="container">
+        <h1 class="title">이벤트</h1>
+        <div class="event-slide-content">
+          <div class="swiper-wrapper">
+            <div class="event swiper-slide">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/WebApp/contents/eventV4/39161/17013942232030.jpg"
+                  alt="1"
+                />
+              </div>
+              <strong>MOINTS X TRAVEL LABEL</strong>
+              <span>2023.11.28~2023.12.08</span>
             </div>
+            <div class="event swiper-slide">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/WebApp/contents/eventV4/39161/17013942232030.jpg"
+                  alt="1"
+                />
+              </div>
+              <strong>MOINTS X TRAVEL LABEL</strong>
+              <span>2023.11.28~2023.12.08</span>
+            </div>
+            <div class="event swiper-slide">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/WebApp/contents/eventV4/39140/17010728538310.jpg"
+                  alt="1"
+                />
+              </div>
+              <strong>MOINTS X TRAVEL LABEL</strong>
+              <span>2023.11.28~2023.12.08</span>
+            </div>
+            <div class="event swiper-slide">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/WebApp/contents/eventV4/39140/17010728538310.jpg"
+                  alt="1"
+                />
+              </div>
+              <strong>MOINTS X TRAVEL LABEL</strong>
+              <span>2023.11.28~2023.12.08</span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <section id="specialRoom">
-        <div class="container">
-            <h1 class="title">특별관</h1>
+      <div class="container">
+        <h1 class="title">특별관</h1>
+        <div class="wrap">
+          <div class="image">
+            <!-- <img
+              src="https://img.cgv.co.kr//Front/Main/2021/1130/16382612660240.png"
+              alt="img"
+            /> -->
+          </div>
+          <div class="hoverChangeImgList">
+            <ul>
+              <li class="on">
+                <a href="#">
+                  <strong>suite cinema</strong>
+                  <div class="tag"><span>#호텔컨셉의 프리미어관</span></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <strong>cine & livingroom</strong>
+                  <div class="tag"><span>#신개념 소셜 상영관</span></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <strong>4dx</strong>
+                  <div class="tag"><span>#모션시트 #오감체험</span></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <strong>cine de chef</strong>
+                  <div class="tag"><span>#쉐프가 있는 영화관</span></div>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
+    <section id="package-ticket-gift">
+      <div class="container">
+        <div class="package">
+          <div class="title">패키지</div>
+          <div class="wrap">
+            <div class="item">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/17016591119350.jpg"
+                  alt="img"
+                />
+              </div>
+              <div class="info">
+                <span>(뽀로로 슈퍼스타 대모험 얼라버드) 할인 할인 관람권</span>
+                <strong>16,000원</strong>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/17016591119350.jpg"
+                  alt="img"
+                />
+              </div>
+              <div class="info">
+                <span>뽀로로 슈퍼스타 대모험 얼라버드 할인 할인 관람권</span>
+                <strong>16,000원</strong>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/17016591119350.jpg"
+                  alt="img"
+                />
+              </div>
+              <div class="info">
+                <span>뽀로로 슈퍼스타 대모험 얼라버드 할인 할인 관람권</span>
+                <strong>16,000원</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ticket">
+          <div class="title">영화관람권</div>
+          <div class="wrap">
+            <div class="item">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/15458911951520.jpg"
+                  alt="img"
+                />
+              </div>
+              <div class="info">
+                <span>CGV 골드클래스</span>
+                <strong>40,000원</strong>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/15458911951520.jpg"
+                  alt="img"
+                />
+              </div>
+              <div class="info">
+                <span>CGV 골드클래스</span>
+                <strong>40,000원</strong>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/15458911951520.jpg"
+                  alt="img"
+                />
+              </div>
+              <div class="info">
+                <span>CGV 골드클래스</span>
+                <strong>40,000원</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gift-card">
+          <div class="title">기프트카드</div>
+          <div class="wrap">
+            <div class="item">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/15940283913270.jpg"
+                  alt="img"
+                />
+              </div>
+              <div class="info">
+                <span>파코니야 여름을 부탁해</span>
+                <strong>금액충전형</strong>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/15940283913270.jpg"
+                  alt="img"
+                />
+              </div>
+              <div class="info">
+                <span>파코니야 여름을 부탁해</span>
+                <strong>금액충전형</strong>
+              </div>
+            </div>
+            <div class="item">
+              <div class="image">
+                <img
+                  src="https://img.cgv.co.kr/GiftStore/Product/Pc/List/15940283913270.jpg"
+                  alt="img"
+                />
+              </div>
+              <div class="info">
+                <span>파코니야 여름을 부탁해</span>
+                <strong>금액충전형</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">지속가능경영</a></li>
+          <li><a href="#">IR</a></li>
+          <li><a href="#">광고/제휴/출점문의</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">편성기준</a></li>
+          <li><a href="#">법적고지</a></li>
+          <li><a href="#">이메일주소무단수집거부</a></li>
+          <li><a href="#">윤리경영</a></li>
+          <li><a href="#">사이버감사실</a></li>
+        </ul>
+      </div>
+    </footer>
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./swiper/swiper.min.js"></script>
     <script>
-        var movieSwiper = new Swiper('.slide-content', {
-            slidesPerView: 5,
-            spaceBetween: 20,
-            slidesPerGroup: 3,
-            loop: false,
-            noSwiping: false,
-        });
+      //swiper: 영화차트, 이벤트
+      var movieSwiper = new Swiper(".slide-content", {
+        slidesPerView: 5,
+        spaceBetween: 20,
+        slidesPerGroup: 3,
+        loop: false,
+        noSwiping: false,
+      });
 
-        var eventSwiper = new Swiper('.event-slide-content', {
-            slidesPerView: 3,
-            spaceBetween: 10,
-            slidesPerGroup: 3,
-            loop: false,
-            noSwiping: false,
-        });
+      var eventSwiper = new Swiper(".event-slide-content", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        slidesPerGroup: 3,
+        loop: false,
+        noSwiping: false,
+      });
+
+      //영화 예고편 재생
+      var video = document.querySelector("#movieVideo video");
+
+      setTimeout(function () {
+        video.play();
+      }, 2000);
+
+      function videoController() {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
+
+      function soundController() {
+        video.muted = !video.muted;
+      }
     </script>
-</body>
+  </body>
 </html>
