@@ -228,6 +228,7 @@ header .util > ul img {
   content: counter(rank);
 }
 
+
 .tab_content .movie .image::before {
   content: "";
   position: absolute;
@@ -239,11 +240,14 @@ header .util > ul img {
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.09) 35%,
+    rgba(0, 0, 0, 0.09) 30%,
     rgba(0, 0, 0, 0.85)
   );
 }
-
+.tab_content .movie .image:hover::before{
+  background: #000;
+  opacity: 0.7;
+}
 .tab_content .movie .image .btn_wrap {
   display: flex;
   flex-direction: column;
@@ -328,13 +332,18 @@ header .util > ul img {
 #event .image {
   height: 250px;
   border-radius: 10px;
+  overflow: hidden;
+  
 }
-
+#event .image:hover img{
+  transform: scale(1.25);
+}
 #event .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.9s;
 }
 
 #event strong {
@@ -494,7 +503,7 @@ nav.scrolled {
   color: #fff;
 }
 
-nav.scrolled .nav li:nth-child(3) > a {
+nav.scrolled .nav>li:nth-child(3) > a {
   color: #fff;
 }
 nav .nav {
@@ -507,7 +516,7 @@ nav .nav > li {
 
 nav .nav > li > a {
   display: block;
-  width: 180px;
+  width: 150px;
   font-size: 18px;
   font-weight: bold;
   padding: 15px 0;
